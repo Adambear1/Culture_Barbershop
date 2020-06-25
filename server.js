@@ -1,8 +1,11 @@
 const express = require("express")
 const logger = require("morgan")
 const helmet = require("helmet")
+const mongoose = require("mongoose")
 
 const PORT = process.env.PORT || 8080
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/culture_barbershop", { useNewUrlParser: false });
 
 const app = express()
 

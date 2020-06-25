@@ -5,7 +5,13 @@
             rel="stylesheet">
         <!--Import materialize.css-->
         <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css"
+            integrity="sha256-kGupfJ4zZb4/m0GPPVY0ng7FwSjZm1E0wMWG1aRYbwk="crossorigin="anonymous"
+            />
+        <link rel="stylesheet"
             href="./assets/materialize.min.css">
+        <link rel="stylesheet"
+            href="./assets/swiper.min.css">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
@@ -15,12 +21,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <header>
-        <nav>
+        <nav class="animate__animated animate__fadeIn">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" class="brand-logo">Culture</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#appointment">Appointment</a></li>
                     <li><a href="#testimonies">Testimonies</a></li>
+                    <li><a href="#merchandise">Merchandise</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
             </div>
@@ -31,7 +38,7 @@
     <!--  -->
     <!-- Carousel -->
     <div class="container">
-        <div class="carousel carousel-slider">
+        <div class="carousel carousel-slider animate__animated animate__fadeIn">
             <a class="carousel-item" href="#one!"><img
                     src="./assets/img/haircut.jpg"></a>
             <a class="carousel-item" href="#two!"><img
@@ -53,33 +60,121 @@
                     <div class="input-field col s6">
                         <input id="first_name"
                             type="text"
-                            class="validate">
+                            class="validate animate__animated">
                         <label for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
+                        <input id="last_name" type="text" class="validate
+                            animate__animated">
                         <label for="last_name">Last Name</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
+                        <input id="email" type="email" class="validate
+                            animate__animated">
                         <label for="email">Email</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="phone_number" type="number"
-                            class="validate">
+                            class="validate animate__animated">
                         <label for="email">Phone Number</label>
                     </div>
                 </div>
                 <a class="btn-floating btn-large waves-effect waves-light red
                     submit"><i
                         class="material-icons">add</i></a>
+                <div class="response" id="response"><p></p></div>
             </form>
         </div>
     </div>
+    <div class="container">
+        <!-- testimonials -->
+        <h2 id="testimonials">Listen to what the community
+            thinks</h2>
+        <p>Happy serving the Tacoma area for over 10 years.</p>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- 1 -->
+                <div class="swiper-slide">
+                    <div class="new-line">
+                        <div class="t-container">
+                            <img
+                                src="https://randomuser.me/api/portraits/men/66.jpg"
+                                alt="Avatar" style="width:90px">
+                            <p><span>Chris Fox.</span> Customer since 2016</p>
+                            <p>Sharon is hands down the best barber in town.
+                                Innovative,
+                                hard-working, caring individual I can trust with
+                                my
+                                hair.</p>
+                        </div>
+                    </div>
+                    <div class="new-line">
+                        <div class="t-container">
+                            <img
+                                src="https://randomuser.me/api/portraits/men/66.jpg"
+                                alt="Avatar" style="width:90px">
+                            <p><span>Chris Fox.</span> Customer since 2016</p>
+                            <p>Sharon is hands down the best barber in town.
+                                Innovative,
+                                hard-working, caring individual I can trust with
+                                my
+                                hair.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2  -->
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <h2 id="testimonials">Listen to what the community
+                            thinks</h2>
+                        <p>Happy serving the Tacoma area for over 10 years.</p>
+                        <div class="t-container">
+                            <img
+                                src="https://randomuser.me/api/portraits/men/40.jpg"
+                                alt="Avatar" style="width:90px">
+                            <p><span>Chris Fox.</span> Customer since 2016</p>
+                            <p>Sharon is hands down the best barber in town.
+                                Innovative,
+                                hard-working, caring individual I can trust with
+                                my
+                                hair.</p>
+                        </div>
+                        <div class="t-container">
+                            <img
+                                src="https://randomuser.me/api/portraits/men/51.jpg"
+                                alt="Avatar" style="width:90px">
+                            <p><span>John Doe.</span> Customer since 2012</p>
+                            <p>Spent almost a decade trusting the staff at
+                                Culture
+                                with my hair.
+                                One of the best decisions I have ever made.</p>
+                        </div>
+                        <div class="t-container">
+                            <img
+                                src="https://randomuser.me/api/portraits/women/20.jpg"
+                                alt="Avatar" style="width:90px">
+                            <p><span>Rebecca Flex.</span> Customer since 2014</p>
+                            <p>One of the best experiences I have ever had.
+                                Reasonable, high
+                                quality, and an all around caring staff. Highly
+                                recommend for
+                                all.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+    <!--  -->
     <!-- Footer -->
     <footer class="page-footer">
         <div class="container">
@@ -92,27 +187,43 @@
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link
+                                1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link
+                                2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link
+                                3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link
+                                4</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                © 2020 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More
+                    Links</a>
             </div>
         </div>
     </footer>
     <body>
         <script src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.esm.browser.bundle.min.js"
+            integrity="sha256-ZHB69PXLYi+R+0XOpuRzzl0jc09P03Rt+1VhyNQMNHA="crossorigin="anonymous"></script>
         <script src="index.js"></script>
         <script src="./assets/materialize.min.js"></script>
-        <!-- <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+        <script src="./assets/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                direction: 'vertical',
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        </script>
     </body>
 </html>

@@ -13,4 +13,15 @@ module.exports = app => {
                 console.log(message)
             })
     })
+    app.get("/User", ({ body }, res) => {
+        db.User.find({})
+            .then(result => {
+                res.json(result)
+                console.log(result)
+            })
+            .catch(({ message }) => {
+                res.send(message)
+                console.log(message)
+            })
+    })
 }
